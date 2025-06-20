@@ -43,10 +43,28 @@
 <body class="faint-grid-bg">
 
     <!-- Header Section -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-50 backdrop-blur-sm">
+    <div class="container mx-auto flex h-20 items-center justify-between px-6">
+        <a href="index.html" class="flex items-center space-x-3">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="8" fill="#FF5800"/>
+                <path d="M10 10H14V22H10V10Z" fill="#0A0A0A"/>
+                <path d="M18 10H22V16H18V10Z" fill="#0A0A0A"/>
+                <path d="M18 18H22V22H18V18Z" fill="#0A0A0A"/>
+            </svg>
+            <span class="text-2xl font-semibold text-white tracking-tight">Hobbliq</span>
+        </a>
+        <nav>
+            <a href="journal.html" class="text-neutral-300 hover:text-white transition-colors duration-300">Journal</a>
+        </nav>
+    </div>
+</header>
+    
+    <!-- Commenting this header block out to import revised code
     <header class="py-6 px-4 sm:px-8">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center space-x-3">
+             <!-- <a href="index.html" class="flex items-center space-x-3">
                 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="32" height="32" rx="8" fill="#FF5800"/>
                     <path d="M10 10H14V22H10V10Z" fill="#0A0A0A"/>
@@ -56,11 +74,11 @@
                 <span class="font-bold text-xl text-white">Hobbliq</span>
             </a>
             <!-- Navigation -->
-            <nav>
+             <!--<nav>
                 <a href="journal.html" class="text-neutral-400 hover:text-white transition">Journal</a>
             </nav>
         </div>
-    </header>
+    </header> 
 
     <!-- Main Content -->
     <main class="text-center py-16 sm:py-20 px-4 sm:px-8">
