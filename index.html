@@ -47,8 +47,9 @@
 <body class="faint-grid-bg">
 
     <!-- Header Section -->
+     <!-- Commenting this header block out to import revised code
     <header class="fixed top-4 left-4 right-4 z-50 bg-#0A0A0A bg-opacity-40 backdrop-blur-sm">
-    <div class="container mx-auto flex h-10 items-center justify-between px-2">
+    <div class="container mx-auto flex h-12 items-center justify-between px-2">
         <a href="index.html" class="flex items-center space-x-3">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="32" height="32" rx="8" fill="#FF5800"/>
@@ -60,6 +61,24 @@
         </a>
         <nav>
             <a href="journal.html" class="text-neutral-300 hover:text-white transition-colors duration-300">Journal</a>
+        </nav>
+    </div>
+</header> -->
+
+
+<header class="fixed top-0 w-full z-50 flex justify-center pt-5">
+    <div class="flex h-12 items-center justify-between gap-x-8 rounded-xl border border-white/10 bg-gray-900/60 px-4 backdrop-blur-lg">
+        <a href="index.html" class="flex items-center space-x-2.5">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="32" height="32" rx="8" fill="#FF5800"/>
+                <path d="M10 10H14V22H10V10Z" fill="#0A0A0A"/>
+                <path d="M18 10H22V16H18V10Z" fill="#0A0A0A"/>
+                <path d="M18 18H22V18V22H18V18Z" fill="#0A0A0A"/>
+            </svg>
+            <span class="text-lg font-semibold text-white">Hobbliq</span>
+        </a>
+        <nav>
+            <a href="journal.html" class="text-sm text-neutral-300 hover:text-white transition-colors duration-300">Journal</a>
         </nav>
     </div>
 </header>
