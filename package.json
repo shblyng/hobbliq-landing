@@ -1,10 +1,10 @@
 {
   "name": "hobbliq-landing",
   "version": "1.0.0",
-  "description": "",
+  "description": "Landing page for Hobbliq.",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./assets/css/input.css -o ./styles/style.css --minify"
+    "build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --minify"
   },
   "keywords": [],
   "author": "",
