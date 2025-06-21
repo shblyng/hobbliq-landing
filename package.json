@@ -1,15 +1,12 @@
 {
   "name": "hobbliq-landing",
   "version": "1.0.0",
-  "description": "Landing page for Hobbliq.",
-  "main": "index.js",
+  "description": "Hobbliq Landing Page",
   "scripts": {
-    "build": "npx tailwindcss -i ./assets/css/style.css -o ./assets/css/style.css --minify"
+    "build": "tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/style.css --minify"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "tailwindcss": "^3.4.1"
   }
 }
+
