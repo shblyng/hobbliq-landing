@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "Hobbliq Landing Page",
   "scripts": {
-    "build": "tailwindcss -i ./public/assets/css/input.css -o ./public/assets/css/style.css --minify"
+    "build": "[my-framework] build --output public"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.1"
   }
 }
-
