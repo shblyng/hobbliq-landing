@@ -4,7 +4,7 @@
   "description": "Landing page for Hobbliq.",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --minify"
+    "build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/input.css --minify"
   },
   "keywords": [],
   "author": "",
