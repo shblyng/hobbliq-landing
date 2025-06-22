@@ -12,7 +12,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-       /* Define custom styles and theme */
+      /* Defines the "shake" animation keyframes */
+  @keyframes shake {
+    10%, 90% {
+      transform: translateX(-1px);
+    }
+    20%, 80% {
+      transform: translateX(2px);
+    }
+    30%, 50%, 70% {
+      transform: translateX(-3px);
+    }
+    40%, 60% {
+      transform: translateX(3px);
+    }
+  }
+
+  /* Creates a utility class to apply the shake animation on hover */
+  .hover-shake:hover {
+    animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
+  }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #0A0A0A;
@@ -45,7 +65,7 @@
     </style>
     </head>
 
-<body class="bg-black bg-red-500">
+<body class="bg-[#0A0A0A]">
 
     <!-- Header Section -->
      <!-- Commenting this header block out to import revised code
@@ -145,28 +165,58 @@
                         required
                         class="w-full sm:w-auto flex-grow bg-neutral-800 text-white placeholder-neutral-500 px-4 py-3 rounded-lg border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
                     > -->
-                    <button type="submit" class="bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg transition-colors duration-300 px-[20px] py-[14px] md:px-[32px] md:py-[14px] border-2 border-[#F89F58] [box-shadow:inset_0_0_6px_0_#F89F58]">
+                    <button type="submit" class="bg-orange-600 hover:bg-orange-700 text-white font-bold 
+                    rounded-lg transition-colors duration-300 px-[20px] py-[14px] md:px-[32px] md:py-[14px] 
+                    [border-width:1.5px] border-solid border-[#F89F58] [box-shadow:inset_0_0_6px_0_#F89F58]">
                         Get Notified at Launch
                     </button>
                 </div>
             </form>
         </section>
 
-        <!-- Product Visuals Boxes -->
-        <section class="relative md:py-40 py-28">
+         <!-- Product Visuals Section -->
+<section class="relative">
+    <!-- This container div controls the width and centering of the images -->
+    <div class="relative max-w-4xl mx-auto">
+        
+        <!-- Background glow effect  -->
+        <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 hero-glow rounded-full blur-3xl opacity-40 h-1/2"></div>
+        
+        <!-- Grid container for the two images -->
+        <div class="relative grid md:grid-cols-2 gap-6">
+            <!-- Left Image (Visible on all screen sizes) -->
+            <img
+                src="images/image1.png"
+                alt="A screenshot of the Hobbliq application."
+                class="w-full rounded-2xl"
+            >
+            <!-- Right Image (Hidden on mobile, visible on desktop) -->
+            <img
+                src="images/image2.png" 
+                alt="Another screenshot of the Hobbliq application."
+                class="w-full rounded-2xl hidden md:block"
+            >
+        </div>
+    </div>
+</section>
+        <!-- Let's keep this out for now! <section class="relative md:py-40 py-28">
             <div class="relative mt-12 max-w-2xl mx-auto">
                  <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 hero-glow rounded-full blur-3xl opacity-40 h-1/2"></div>
+                 <img
+            src="images/image.png"
+            alt="A screenshot of the Hobbliq application."
+            class="relative w-full">
                 <img 
-                    src="https://storage.googleapis.com/gemini-prod/images/utyfyutggui.jpg" 
+                    src="/images/your-Image 1.png" 
                     alt="A screenshot of the Hobbliq notes modal showing collaborative notes."
-                    class="relative w-full rounded-2xl bg-[#0F0F0F] border-2 border-[#1A1A1A]/20 aspect-video object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/1200x750/0A0A0A/E6E6E6?text=Collaboration+Features';"
-                >
-            </div>
+                    class="relative w-full rounded-2xl bg-[#1A1A1A] border-2 border-[#1A1A1A]/20 aspect-video object-cover"
+                    onerror="this.onerror=null;this.src='/images/your-Image 1.png';"
+                
+            </div> -->
         </section>
 
         <!-- Feature Section 1: From Chaos to Control -->
-        <section class="mt-24 sm:mt-32 container mx-auto max-w-5xl">
+        <section class="mt-24 sm:mt-56 container mx-auto max-w-5xl text-center">
             <h2 class="text-5xl md:text-[78px] font-black text-white leading-[52px] md:leading-[78px] tracking-tight">
             From Chaos <br>to Control.
         </h2>
@@ -185,37 +235,44 @@
                         required
                         class="w-full sm:w-auto flex-grow bg-neutral-800 text-white placeholder-neutral-500 px-4 py-3 rounded-lg border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
                     > -->
-                    <button type="submit" class="bg-[#FFFFFF] hover:bg-white-700 text-[#0A0A0A] font-medium rounded-lg transition-colors duration-300 px-[20px] py-[14px] md:px-[32px] md:py-[14px] border-2 border-[#606060]">
+                    <button type="submit" class="bg-[#FFFFFF] hover:bg-orange-600 hover:border-[#F89F58] hover:text-[#FFFFFF] hover:[box-shadow:inset_0_0_6px_0_#F89F58]
+                    text-[#0A0A0A] font-medium rounded-lg transition-colors duration-300 px-[20px] py-[14px] 
+                    md:px-[32px] md:py-[14px] [border-width:1.5px] border-solid border-[#606060]">
                         Get Notified at Launch
                     </button>
                 </div>
             </form>
-
-             <section class="relative md:py-40 py-28">
-            <div class="relative mt-12 max-w-2xl mx-auto">
-                 <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 hero-glow rounded-full blur-3xl opacity-40 h-1/2"></div>
-                <img 
-                    src="https://storage.googleapis.com/gemini-prod/images/utyfyutggui.jpg" 
-                    alt="A screenshot of the Hobbliq notes modal showing collaborative notes."
-                    class="relative w-full rounded-2xl bg-[#0F0F0F] border-2 border-[#1A1A1A]/20 aspect-video object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/1200x750/0A0A0A/E6E6E6?text=Collaboration+Features';"
-                >
-            </div>
-        </section>
         </section>
 
-        <!-- Feature Section 2: Work in Harmony -->
-        <section class="mt-24 sm:mt-32 container mx-auto max-w-5xl">
+         <!-- 2nd Product Visuals Section -->
+<section class="relative mt-32 sm:mt-48">
+   <!-- Image container for the single wide image responsive swapping -->
+        <div class="relative max-w-4xl mx-auto">
+            <!-- Image for Mobile (and smaller screens) -->
+            <img
+                src="images/image3-mobile.png"
+                alt="A mobile-optimized screenshot of the Hobbliq application."
+                class="w-full rounded-2xl object-cover block md:hidden"
+            >
+            <!-- Image for Desktop (and larger screens) -->
+            <img
+                src="images/image3.png"
+                alt="A mobile-optimized screenshot of the Hobbliq application."
+                class="w-full rounded-2xl object-cover hidden md:block"
+            >
+        </div>
+</section>
+
+<!-- Feature Section 2: Work in Harmony -->
+        <section class="mt-24 sm:mt-56 container mx-auto max-w-5xl text-center">
             <h2 class="text-5xl md:text-[78px] font-black text-white leading-[52px] md:leading-[78px] tracking-tight">
-            Work in <br>Harmony.
+            Work <br>in Harmony.
         </h2>
 
             <p class="mt-6 max-w-2xl mx-auto text-[22px] md:text-2xl font-medium text-[#EDEDED] leading-[28px] md:leading-[40px] tracking-tight">
                 Invite your team, assign tasks, <br class="md:hidden">
-                <br class="hidden md:block">
-                and share notes seamlessly. <br class="md:hidden">Hobbliq is your team's  
-                <br class="hidden md:block">
-                single source of truth, keeping <br class="md:hidden">everyone aligned.
+                and share <br class="hidden md:block">notes seamlessly. <br class="md:hidden">Hobbliq is your team's 
+                single <br class="hidden md:block">source of truth, keeping <br class="md:hidden">everyone aligned.
             </p>
             <form class="mt-6 md:mt-6 max-w-lg mx-auto">
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -226,72 +283,138 @@
                         required
                         class="w-full sm:w-auto flex-grow bg-neutral-800 text-white placeholder-neutral-500 px-4 py-3 rounded-lg border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
                     > -->
-                    <button type="submit" class="bg-[#FFFFFF] hover:bg-white-700 text-[#0A0A0A] font-medium rounded-lg transition-colors duration-300 px-[20px] py-[14px] md:px-[32px] md:py-[14px] border-2 border-[#606060]">
+                    <button type="submit" class="bg-[#FFFFFF] hover:bg-orange-600 hover:border-[#F89F58] hover:text-[#FFFFFF] hover:[box-shadow:inset_0_0_6px_0_#F89F58]
+                    text-[#0A0A0A] font-medium rounded-lg transition-colors duration-300 px-[20px] py-[14px] 
+                    md:px-[32px] md:py-[14px] [border-width:1.5px] border-solid border-[#606060]">
                         Get Notified at Launch
                     </button>
                 </div>
             </form>
-
-             <section class="relative md:py-40 py-28">
-            <div class="relative mt-12 max-w-2xl mx-auto">
-                 <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 hero-glow rounded-full blur-3xl opacity-40 h-1/2"></div>
-                <img 
-                    src="https://storage.googleapis.com/gemini-prod/images/utyfyutggui.jpg" 
-                    alt="A screenshot of the Hobbliq notes modal showing collaborative notes."
-                    class="relative w-full rounded-2xl bg-[#0F0F0F] border-2 border-[#1A1A1A]/20 aspect-video object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/1200x750/0A0A0A/E6E6E6?text=Collaboration+Features';"
-                >
-            </div>
-        </section>
         </section>
 
-        <!-- Feature Section 3: Find Your Flow -->
-        <section class="mt-24 sm:mt-32 container mx-auto max-w-5xl">
-            <h1 class="text-5xl md:text-[78px] font-black text-white md:leading-[78px] sm:leading-[52px] tracking-tight">
-                Find Your <br>Flow.
-            </h1>
-            <p class="mt-4 max-w-xl mx-auto text-neutral-400">From our elegant dark mode to the fluid interactions, every detail is designed to be intuitive, beautiful, and a genuine joy to use.</p>
-            <section class="relative md:py-40 py-28">
-            <div class="relative mt-12 max-w-2xl mx-auto">
-                 <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 hero-glow rounded-full blur-3xl opacity-40 h-1/2"></div>
-                <img 
-                    src="https://storage.googleapis.com/gemini-prod/images/utyfyutggui.jpg" 
-                    alt="A screenshot of the Hobbliq notes modal showing collaborative notes."
-                    class="relative w-full rounded-2xl bg-[#0F0F0F] border-2 border-[#1A1A1A]/20 aspect-video object-cover"
-                    onerror="this.onerror=null;this.src='https://placehold.co/1200x750/0A0A0A/E6E6E6?text=Collaboration+Features';"
-                >
-            </div>
+<!-- 3rd Product Visuals Section -->
+<section class="relative mt-32 sm:mt-48">
+    <!-- This container div controls the width and centering of the images -->
+    <div class="relative max-w-4xl mx-auto">
+        
+        <!-- Background glow effect  -->
+        <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 hero-glow rounded-full blur-3xl opacity-40 h-1/2"></div>
+        
+        <!-- Grid container for the two images -->
+        <div class="relative grid md:grid-cols-2 gap-6">
+            <!-- Left Image -->
+            <img
+                src="images/image4.png"
+                alt="A screenshot of the Hobbliq application."
+                class="w-full rounded-2xl"
+            >
+            <!-- Right Image -->
+            <img
+                src="images/image5.png" 
+                alt="Another screenshot of the Hobbliq application."
+                class="w-full rounded-2xl hidden md:block"
+            >
+        </div>
+    </div>
+</section>
+
+
+<!-- Feature Section 3: Find Your Flow -->
+        <section class="mt-24 sm:mt-56 container mx-auto max-w-5xl text-center">
+            <h2 class="text-5xl md:text-[78px] font-black text-white leading-[52px] md:leading-[78px] tracking-tight">
+            Find <br>Your Flow.
+        </h2>
+
+            <p class="mt-6 max-w-2xl mx-auto text-[22px] md:text-2xl font-medium text-[#EDEDED] leading-[28px] md:leading-[40px] tracking-tight">
+                From our elegant dark mode to the <br class="hidden md:block">fluid interactions, 
+                every detail is designed to be <br class="hidden md:block">intuitive, beautiful, and a genuine joy to use.
+            </p>
+            <form class="mt-6 md:mt-6 max-w-lg mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <!-- <input 
+                        type="email" 
+                        name="email"
+                        placeholder="Enter your email" 
+                        required
+                        class="w-full sm:w-auto flex-grow bg-neutral-800 text-white placeholder-neutral-500 px-4 py-3 rounded-lg border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
+                    > -->
+                    <button type="submit" class="bg-[#FFFFFF] hover:bg-orange-600 hover:border-[#F89F58] hover:text-[#FFFFFF] hover:[box-shadow:inset_0_0_6px_0_#F89F58]
+                    text-[#0A0A0A] font-medium rounded-lg transition-colors duration-300 px-[20px] py-[14px] 
+                    md:px-[32px] md:py-[14px] [border-width:1.5px] border-solid border-[#606060]">
+                        Get Notified at Launch
+                    </button>
+                </div>
+            </form>
         </section>
-        </section>
+
+<!-- 4th Product Visuals Section -->
+<section class="relative mt-32 sm:mt-48">
+    <!-- This container div controls the width and centering of the images -->
+    <div class="relative max-w-4xl mx-auto">
+        
+        <!-- Background glow effect  -->
+        <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 hero-glow rounded-full blur-3xl opacity-40 h-1/2"></div>
+        
+        <!-- Grid container for the two images -->
+        <div class="relative grid md:grid-cols-2 gap-6">
+            <!-- Left Image -->
+            <img
+                src="images/image6.png"
+                alt="A screenshot of the Hobbliq application."
+                class="w-full rounded-2xl"
+            >
+            <!-- Right Image -->
+            <img
+                src="images/image7.png" 
+                alt="Another screenshot of the Hobbliq application."
+                class="w-full rounded-2xl hidden md:block"
+            >
+        </div>
+    </div>
+</section>
+
 
          <!-- Final CTA Section -->
-        <section class="mt-24 sm:mt-32 container mx-auto max-w-4xl">
+        <section class="mt-24 sm:mt-56 container mx-auto max-w-4xl">
+            <div class="flex justify-center mb-6">
+                <div class="w-16 h-16 rounded-3xl bg-[#FF5800] flex items-center justify-center">
+                    <!-- You can place your final SVG logo icon here -->
+                </div>
+            </div>
             <h1 class="text-5xl md:text-[78px] font-black text-white md:leading-[78px] sm:leading-[52px] tracking-tight">
                 Your Event. <br>Your Control.
             </h1>
              <div class="mt-8">
-                <button class="cta-button text-white font-bold px-8 py-4 rounded-lg text-lg">
-                    Get Notified at Launch
-                </button>
-             </div>
+                <!-- CTA Form -->
+            <form class="mt-6 md:mt-6 max-w-lg mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <!-- <input 
+                        type="email" 
+                        name="email"
+                        placeholder="Enter your email" 
+                        required
+                        class="w-full sm:w-auto flex-grow bg-neutral-800 text-white placeholder-neutral-500 px-4 py-3 rounded-lg border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-orange-500 transition"
+                    > -->
+                    <button type="submit" class="bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg transition-colors duration-300 px-[20px] py-[14px] md:px-[32px] md:py-[14px] [border-width:1.5px] border-solid border-[#F89F58] [box-shadow:inset_0_0_6px_0_#F89F58]">
+                        Get Notified at Launch
+                    </button>
+                </div>
+                <div class="flex justify-center space-x-6 mt-8">
+                <p class="text-[20px] text-[#999999]">Join the waitlist, and follow our <br>progress on our 
+                    <a href="#" class="inline-block text-[#FFFFFF] hover:text-[#2c9879] transition-colors duration-700 font-medium hover-shake">Journal</a> or on 
+                    <a href="#" class="inline-block text-[#FFFFFF] hover:text-[#5a8bfd] transition-colors duration-500 font-medium hover-shake">Twitter.</a>
+                </p>
+            </div>
+            </form>
         </section>
 
     </main>
 
        <!-- Footer -->
-    <footer class="text-center py-16 px-4 mt-16 border-t border-neutral-800">
-        <div class="space-y-4">
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="text-neutral-400 hover:text-white transition">Twitter</a>
-                <a href="#" class="text-neutral-400 hover:text-white transition">LinkedIn</a>
-            </div>
-            <div class="flex justify-center space-x-6">
-                <a href="#" class="text-neutral-500 hover:text-white transition">Terms of Service</a>
-                <span class="text-neutral-600">•</span>
-                <a href="#" class="text-neutral-500 hover:text-white transition">Privacy Policy</a>
-            </div>
+    <footer class="text-center pb-6 mt-8">
+        <div class="space-y-2">
             <div>
-                 <p class="text-sm text-neutral-600">&copy; 2025 Hobbliq. For the love of craft ♥</p>
+                 <p class="text-sm text-neutral-600">&copy; 2025 Hobbliq. For the love of craft <span class="text-red-500">♥</span></p>
             </div>
         </div>
     </footer>
