@@ -152,25 +152,31 @@
             </form>
         </section>
 
+        <!-- Product Visuals Boxes -->
         <section class="relative md:py-24 py-16">
     <div class="container relative">
-        <!-- Grid for the two images -->
-        <div class="grid md:grid-cols-2 grid-cols-1 items-center gap-6">
+        <!-- Glow effect behind the boxes -->
+        <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-full max-w-3xl h-64 bg-orange-600/10 rounded-full blur-3xl opacity-50"></div>
+        </div>
+
+        <!-- Grid for the two feature images -->
+        <div class="relative grid md:grid-cols-2 grid-cols-1 items-start gap-y-8">
             
             <!-- Left Image -->
-            <div class="relative">
-                <img src="https://placehold.co/600x400/1A1B1E/EDEDED?text=Product+Visual+1" 
-                     alt="Product visual showing task management" 
-                     class="rounded-lg shadow-lg"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/1A1B1E/EDEDED?text=Image+Not+Found';">
+            <div class="relative z-10">
+                 <img src="https://placehold.co/800x600/1A1B1E/EDEDED?text=Visual+1" 
+                     alt="A visual of the Hobbliq application's dashboard" 
+                     class="rounded-2xl w-full"
+                     onerror="this.onerror=null;this.src='https://placehold.co/800x600/1A1B1E/EDEDED?text=Image+Not+Found';">
             </div>
 
-            <!-- Right Image -->
-            <div class="relative">
-                <img src="https://placehold.co/600x400/1A1B1E/EDEDED?text=Product+Visual+2" 
-                     alt="Product visual showing event schedule" 
-                     class="rounded-lg shadow-lg"
-                     onerror="this.onerror=null;this.src='https://placehold.co/600x400/1A1B1E/EDEDED?text=Image+Not+Found';">
+            <!-- Right Image (with negative margin for overlap on desktop) -->
+            <div class="relative md:-ml-16">
+                 <img src="https://placehold.co/800x600/1A1B1E/EDEDED?text=Visual+2" 
+                     alt="A visual of the Hobbliq application's scheduling feature" 
+                     class="rounded-2xl w-full"
+                     onerror="this.onerror=null;this.src='https://placehold.co/800x600/1A1B1E/EDEDED?text=Image+Not+Found';">
             </div>
         </div>
     </section>
